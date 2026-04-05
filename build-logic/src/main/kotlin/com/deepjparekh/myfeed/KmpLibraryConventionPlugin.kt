@@ -11,6 +11,7 @@ class KmpLibraryConventionPlugin : Plugin<Project> {
             with(pluginManager) {
                 apply("org.jetbrains.kotlin.multiplatform")
                 apply("com.android.library")
+                apply("myfeed.static.analysis")
             }
 
             extensions.configure<LibraryExtension> {

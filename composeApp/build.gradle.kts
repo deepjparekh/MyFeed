@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.myfeed.android.application)
     alias(libs.plugins.myfeed.compose.multiplatform)
-    alias(libs.plugins.myfeed.static.analysis)
 }
 
 kotlin {
@@ -11,6 +10,7 @@ kotlin {
             implementation(libs.androidx.activity.compose)
         }
         commonMain.dependencies {
+            implementation(project(":core:designsystem"))
             implementation(libs.compose.runtime)
             implementation(libs.compose.foundation)
             implementation(libs.compose.material3)

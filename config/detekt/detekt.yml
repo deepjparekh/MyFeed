@@ -11,16 +11,20 @@ complexity:
   active: true
   LargeClass:
     active: true
-    threshold: 600
+    threshold: 150
   LongMethod:
     active: true
-    threshold: 60
+    threshold: 40
+  LongParameterList:
+    active: true
+    functionThreshold: 8
+    constructorThreshold: 8
   MethodOverloading:
     active: true
-    threshold: 6
+    threshold: 3
   NestedBlockDepth:
     active: true
-    threshold: 4
+    threshold: 3
 
 naming:
   active: true
@@ -37,10 +41,20 @@ naming:
 
 style:
   active: true
+  MagicNumber:
+    active: true
+    ignoreNumbers: ['-1', '0', '1', '2']
+    ignorePropertyDeclaration: true
   MaxLineLength:
     active: true
-    maxLineLength: 120
+    maxLineLength: 100
   UnusedImports:
     active: true
   WildcardImport:
+    active: true
+  NoEmptyClassBody:
+    active: true
+  OptionalUnit:
+    active: true
+  UnnecessaryParentheses:
     active: true
