@@ -1,7 +1,7 @@
 # Product Requirements Document (PRD): MyFeed
 
-**Document Version:** 1.0  
-**Status:** Draft  
+**Document Version:** 1.0
+**Status:** Draft
 **Target Platforms:** Native Android & Native iOS
 **UX Link:** https://stitch.withgoogle.com/projects/7838322622706508906
 
@@ -30,7 +30,7 @@ The V1 scope is strictly limited to a two-screen architecture focusing on config
 The design philosophy is utility-first and distraction-free.
 
 ### Screen 1: Feed Screen (Home/Launch State)
-* **Layout:** Edge-to-edge full screen with immersive Status bar and navigation bar experience. 
+* **Layout:** Edge-to-edge full screen with immersive Status bar and navigation bar experience.
 * **Interaction:** * *Swipe Up/Down:* Manually navigate to the next/previous video (resets the auto-scroll timer).
   * *Tap on video feed item:* Toggle Pause/UnPause feed item video and auto-scrolling.
   * *Tap on mute/un-mute button:* Toggle Mute/Unmute globally across the feed.
@@ -57,7 +57,7 @@ The design philosophy is utility-first and distraction-free.
 * Playback and the auto-scroll timer must pause if the application loses system audio focus (e.g., incoming phone call, alarm) or experiences other system interruptions.
 * Scroll should be smooth and snap to next item.
 * Manual scroll via user should only allow smooth snapping to next item.
-* Scroll back to first item in circular fashion once the user is manually/auto-scrolling past last item. 
+* Scroll back to first item in circular fashion once the user is manually/auto-scrolling past last item.
 
 ### 4.4 Error Handling
 * Invalid URLs, region-locked videos, or disabled embeds should not crash the app.

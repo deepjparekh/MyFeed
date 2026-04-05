@@ -10,10 +10,12 @@ repositories {
 }
 
 dependencies {
-    compileOnly(libs.android.gradlePlugin)
-    compileOnly(libs.kotlin.gradlePlugin)
-    compileOnly(libs.compose.gradlePlugin)
-    compileOnly(libs.room.gradlePlugin)
+    implementation(libs.android.gradlePlugin)
+    implementation(libs.kotlin.gradlePlugin)
+    implementation(libs.compose.gradlePlugin)
+    implementation(libs.room.gradlePlugin)
+    implementation(libs.detekt.gradlePlugin)
+    implementation(libs.spotless.gradlePlugin)
 }
 
 gradlePlugin {
@@ -33,6 +35,10 @@ gradlePlugin {
         register("composeMultiplatform") {
             id = "myfeed.compose.multiplatform"
             implementationClass = "com.deepjparekh.myfeed.ComposeMultiplatformConventionPlugin"
+        }
+        register("staticAnalysis") {
+            id = "myfeed.static.analysis"
+            implementationClass = "com.deepjparekh.myfeed.StaticAnalysisConventionPlugin"
         }
     }
 }
