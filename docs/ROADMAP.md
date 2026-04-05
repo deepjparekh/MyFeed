@@ -6,7 +6,7 @@ This roadmap outlines the modular development of the MyFeed application. Each ta
 **Goal:** Establish the project's skeleton, build system updates, and persistent storage layer.
 **Modules:** `:core:database`, `:core:designsystem`, `:core:common`
 
-- [ ] **PR 1: Version Catalog & Build Logic Setup**
+- [x] **PR 1: Version Catalog & Build Logic Setup**
     - Update `libs.versions.toml` with Room 3.0, Media3, Navigation 3, and Lifecycle 2.8+ versions.
     - Implement shared Gradle convention plugins for KMP modules (Android/iOS targets, Kotlin options).
 - [ ] **PR 2: Core Design System (`:core:designsystem`)**

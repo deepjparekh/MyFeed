@@ -12,9 +12,19 @@ androidx-testExt = "1.3.0"
 composeMultiplatform = "1.10.3"
 junit = "4.13.2"
 kotlin = "2.3.20"
-material3 = "1.10.0-alpha05"
+material3 = "1.10.0"
+room = "2.8.4"
+media3 = "1.10.0"
+navigation = "1.0.0-alpha05"
+ksp = "2.3.20-1.0.30"
+sqlite = "2.5.0"
 
 [libraries]
+android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
+kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+compose-gradlePlugin = { group = "org.jetbrains.compose", name = "compose-gradle-plugin", version.ref = "composeMultiplatform" }
+room-gradlePlugin = { group = "androidx.room", name = "room-gradle-plugin", version.ref = "room" }
+
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-testJunit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
 junit = { module = "junit:junit", version.ref = "junit" }
@@ -33,9 +43,29 @@ compose-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "composeMul
 compose-components-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "composeMultiplatform" }
 compose-uiToolingPreview = { module = "org.jetbrains.compose.ui:ui-tooling-preview", version.ref = "composeMultiplatform" }
 
+# Room
+room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+sqlite-bundled = { module = "androidx.sqlite:sqlite-bundled", version.ref = "sqlite" }
+
+# Media3
+media3-exoplayer = { module = "androidx.media3:media3-exoplayer", version.ref = "media3" }
+media3-ui-compose = { module = "androidx.media3:media3-ui-compose", version.ref = "media3" }
+
+# Navigation
+navigation-compose = { module = "org.jetbrains.androidx.navigation3:navigation3-ui", version.ref = "navigation" }
+
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
 composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "composeMultiplatform" }
 composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+room = { id = "androidx.room", version.ref = "room" }
+
+# Project Convention Plugins
+myfeed-android-application = { id = "myfeed.android.application", version = "unspecified" }
+myfeed-kmp-library = { id = "myfeed.kmp.library", version = "unspecified" }
+myfeed-kmp-library-compose = { id = "myfeed.kmp.library.compose", version = "unspecified" }
+myfeed-compose-multiplatform = { id = "myfeed.compose.multiplatform", version = "unspecified" }
