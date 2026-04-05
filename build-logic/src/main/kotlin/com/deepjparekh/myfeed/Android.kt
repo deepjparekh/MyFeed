@@ -1,15 +1,19 @@
 package com.deepjparekh.myfeed
 
 import com.android.build.api.dsl.CommonExtension
-import org.gradle.api.Project
 import org.gradle.api.JavaVersion
+import org.gradle.api.Project
+import org.gradle.api.artifacts.VersionCatalogsExtension
+import org.gradle.kotlin.dsl.getByType
 
 internal fun Project.configureAndroid(commonExtension: CommonExtension<*, *, *, *, *, *>) {
+    val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
+
     commonExtension.apply {
-        compileSdk = 36 // Use libs.versions.android-compileSdk if possible
+        compileSdk = libs.versionInt("android-compileSdk")
 
         defaultConfig {
-            minSdk = 24
+            minSdk = libs.versionInt("android-minSdk")
         }
 
         compileOptions {
