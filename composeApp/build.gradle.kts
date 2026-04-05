@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.myfeed.android.application)
     alias(libs.plugins.myfeed.compose.multiplatform)
-    alias(libs.plugins.myfeed.static.analysis)
 }
 
 kotlin {

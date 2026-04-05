@@ -45,7 +45,7 @@ class StaticAnalysisConventionPlugin : Plugin<Project> {
             }
 
             tasks.withType<Detekt>().configureEach {
-                exclude("**/build/**")
+                exclude { it.file.absolutePath.contains("/build/") }
                 reports {
                     html.required.set(true)
                     xml.required.set(true)
