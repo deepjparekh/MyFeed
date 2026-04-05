@@ -9,7 +9,7 @@ This roadmap outlines the modular development of the MyFeed application. Each ta
 - [x] **PR 1: Version Catalog & Build Logic Setup**
     - Update `libs.versions.toml` with Room 3.0, Media3, Navigation 3, and Lifecycle 2.8+ versions.
     - Implement shared Gradle convention plugins for KMP modules (Android/iOS targets, Kotlin options).
-- [ ] **PR 2: Core Design System (`:core:designsystem`)**
+- [x] **PR 2: Core Design System (`:core:designsystem`)**
     - Define Material 3 Color Schemes, Typography, and Shapes.
     - Implement common components: `MyFeedButton`, `MyFeedTextField`, `LoadingSpinner`.
 - [ ] **PR 3: Core Database (`:core:database`) with Room KMP**
