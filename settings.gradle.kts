@@ -35,3 +35,5 @@ dependencyResolutionManagement {
 include(":composeApp")
 include(":core:designsystem")
 project(":core:designsystem").projectDir = file("core/designsystem")
+include(":core:database")
+project(":core:database").projectDir = file("core/database")
